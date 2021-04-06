@@ -1,3 +1,26 @@
+class Destinations{
+    constructor(name,description,price){
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+}
+
+var dest1 = new Destinations("Bora Bora","Bora Bora was discovered by Captain James Cook in 1769. It’s one of the most secluded islands on Earth. It’s halfway between Australia and the United States.",2800);
+var dest2 = new Destinations("Bali","While Bali is the name of the island, it is also a province that includes a handful of smaller islands congregated off the main island’s southeast coast.",850);
+var dest3 = new Destinations("El Nido","El Nido is arguably one of the most popular resort destinations in the Philippines",192);
+var destlist = [dest1,dest2,dest3] 
+var taglist = ["tag1","tag2","tag3"]
+
+function fun1()
+{   
+    for( var i=0; destlist.length;i++)
+    document.getElementById(taglist[i]).innerHTML=
+    "<h3>"+destlist[i].name+"</h3><br>"+
+    "<p>"+destlist[i].description+"</p><br>"+
+    "<p>$"+destlist[i].price+"</p><br>";
+}
+
 function formValidation() {
     var uname = document.registration.username;
     var uadd = document.registration.address;
@@ -13,10 +36,11 @@ function formValidation() {
                         }
                     }
                 }
+                return false;
             }
         
     
-    return false;
+    
 
     
 function allLetter(uname) {
